@@ -9,7 +9,7 @@ jobs:
       VERSION: '2.9.1'
       VENDOR: 'xiaomi'
       CODENAME: 'violet'
-      BUILD_LUNCH: 'omni_violet-userdebug'
+      BUILD_LUNCH: 'omni_violet-eng'
       # It's either Official build or Test build
       # PB_OFFICIAL: 'true'
       TEST_BUILD: 'true'
