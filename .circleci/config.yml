@@ -11,8 +11,8 @@ jobs:
       CODENAME: 'violet'
       BUILD_LUNCH: 'omni_violet-eng'
       # It's either Official build or Test build
-      PB_OFFICIAL: 'true'
-      # TEST_BUILD: 'true'
+      #PB_OFFICIAL: 'true'
+      TEST_BUILD: 'true'
       EXTRA_CMD: 'cd system/libvintf && patch -p1 < ../../device/xiaomi/violet/patches/system-libvintf-disable-vbmeta-check.patch && cd ../..'
     working_directory: /home/builder/pitchblack
     steps:
