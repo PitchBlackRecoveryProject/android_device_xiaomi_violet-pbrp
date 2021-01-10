@@ -1,36 +1,13 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
-executors:
-  worker:
-    docker:
-      - image: fr3akyphantom/droid-builder:latest
-        auth:
-          username: $DOCKERHUB_USERNAME
-          password: $DOCKERHUB_PASSWORD
-jobs:
-  build:
-    executor: worker
-    environment:
-      MANIFEST_BRANCH: 'android-9.0'
-      VENDOR: 'xiaomi'
-      CODENAME: 'violet'
-      FLAVOR: 'eng'
-      PB_OFFICIAL: 'true'
-      MAINTAINER: '@Joker_V2_0'
-      CHANGELOG: |
-        - Initial Official Build
-    working_directory: /home/builder/pitchblack
-    steps:
-      - run:
-          name: AIO Build
-          command: |
-            wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_utils/pb/build.sh
-            source build.sh
+# Use a package of configuration called an orb.
+orbs:
+  # Declare a dependency on the welcome-orb
+  welcome: circleci/welcome-orb@0.4.1
+# Orchestrate or schedule a set of jobs
 workflows:
-  version: 2.1
-  build_and_test:
+  # Name the workflow "welcome"
+  welcome:
+    # Run the welcome/run job in its own container
     jobs:
-      - build:
-          filters:
-            branches:
-              only: 'android-9.0'
-          context: org-global
+      - welcome/run
