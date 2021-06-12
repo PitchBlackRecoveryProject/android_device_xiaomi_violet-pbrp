@@ -37,3 +37,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.build.date \
     ro.build.date.utc
+
+# System as root
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.twrp.sar=true
