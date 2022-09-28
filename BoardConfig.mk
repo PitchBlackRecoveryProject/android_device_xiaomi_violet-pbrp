@@ -134,7 +134,7 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
 
 # TWRP specific build flags
-TW_DEVICE_VERSION :=By Joker
+#TW_DEVICE_VERSION :=By Joker
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
@@ -150,8 +150,8 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
 TW_INCLUDE_RESETPROP := true
-TW_EXCLUDE_TWRPAPP := true
-TW_Y_OFFSET := 80
-TW_H_OFFSET := -80
+#TW_EXCLUDE_TWRPAPP := true
+#TW_Y_OFFSET := 80
+#TW_H_OFFSET := -80
 TW_OVERRIDE_SYSTEM_PROPS := \
     "ro.build.date.utc;ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
