@@ -162,3 +162,6 @@ TW_OVERRIDE_SYSTEM_PROPS := \
 
 # Torch
 PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
+
+# PBRP specific build flags
+PB_DISABLE_DEFAULT_DM_VERITY := true
